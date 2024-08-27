@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Emergency Calls</h2>
+    <form>
+        <div class="mb-3">
+            <label for="safe-word" class="form-label">Set Your Safe Word</label>
+            <input type="text" class="form-control" id="safe-word" placeholder="Enter your safe word">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="triggerEmergencyCall()">Test Emergency Call</button>
+    </form>
+</div>
+
+<script>
+    function triggerEmergencyCall() {
+        alert('Emergency call triggered with the safe word!');
+        // Implement actual emergency call logic here
+    }
+</script>
+{% endblock %}
