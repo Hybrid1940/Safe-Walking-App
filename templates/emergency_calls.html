@@ -2,19 +2,16 @@
 {% block content %}
 <div class="container mt-5">
     <h2>Emergency Calls</h2>
-    <form>
+    <form method="POST" action="/set_safe_word">
         <div class="mb-3">
             <label for="safe-word" class="form-label">Set Your Safe Word</label>
-            <input type="text" class="form-control" id="safe-word" placeholder="Enter your safe word">
+            <input type="text" class="form-control" id="safe-word" name="safe_word" placeholder="Enter your safe word" required>
         </div>
-        <button type="button" class="btn btn-danger" onclick="triggerEmergencyCall()">Test Emergency Call</button>
+        <div class="mb-3">
+            <label for="phone-number" class="form-label">Emergency Phone Number</label>
+            <input type="tel" class="form-control" id="phone-number" name="phone_number" placeholder="Enter emergency phone number" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
-
-<script>
-    function triggerEmergencyCall() {
-        alert('Emergency call triggered with the safe word!');
-        // Implement actual emergency call logic here
-    }
-</script>
 {% endblock %}
